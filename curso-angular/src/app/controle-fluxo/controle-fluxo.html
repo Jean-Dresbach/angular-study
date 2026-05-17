@@ -1,0 +1,36 @@
+<!-- Controle de fluxo é a parte do código que decide como o programa se comporta em diferentes situações. Ele determina:
+
+se um bloco de código deve ser executado ou ignorado (if / else)
+qual caminho tomar entre várias opções (switch)
+quantas vezes repetir um bloco (for, while, etc.) -->
+
+@if (media >= 8) {
+  <p>Aluno aprovado</p>
+} @else if (media >= 5) {
+  <p>Aluno em recuperação</p>
+} @else {
+  <p>Aluno reprovado</p>
+}
+
+<hr />
+
+@switch (linguagem) {
+  @case ('HTML') {
+    <p>Linguagem de marcação.</p>
+  }
+  @case ('CSS') {
+    <p>Linguagem de estilização.</p>
+  }
+  @case ('js') {
+    <p>Linguagem de programação.</p>
+  }
+  @default {
+    <p>Linguagem desconhecida.</p>
+  }
+}
+
+<hr />
+
+@for (nome of nomes; track $index) {
+  <p>{{ $index }} - {{ nome }}</p>
+}
