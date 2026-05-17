@@ -1,0 +1,18 @@
+<!-- Opções de data binding:
+
+- {{}}  <- Interpolação
+- ()    <- Eventos
+- []    <- Propriedades
+- [()]  <- Two-way data binding 
+
+-->
+
+<!-- <input type="text" [(ngModel)]="nome" /> -->
+
+<!-- Se o input estiver fora de um formulário não é necessário usar a propriedade name, porém, quando o input estiver dentro de um formulário, é necessário usar a propriedade name para que o Angular possa identificar o campo e associar o valor ao modelo. -->
+
+<form>
+  <input type="text" name="nome" [(ngModel)]="nome" />
+</form>
+
+<h1>{{ nome }}</h1>
